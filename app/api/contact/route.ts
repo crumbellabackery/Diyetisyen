@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Lütfen tüm gerekli alanları doldurun.' }, { status: 400 });
     }
 
-    const recipient = process.env.EMAIL_RECEIVER ?? defaultRecipient;
+    const recipient = process.env.EMAIL_RECEIVER?.trim() || process.env.EMAIL?.trim() || defaultRecipient;
     const sender = process.env.EMAIL_SENDER?.trim();
     const resendApiKey = process.env.RESEND_API_KEY?.trim();
     const smtpHost = process.env.EMAIL_SMTP_HOST?.trim();
