@@ -50,3 +50,4 @@ Premium Next.js web sitesi for a dietitian, built with Tailwind CSS and TypeScri
 - The booking flow is implemented as a multi-step form.
 - The calculator section is an interactive health tool with actionable CTAs.
 - Docs are available in `docs/` for design and implementation guidance.
+# Diyetisyen
