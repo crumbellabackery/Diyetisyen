@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  background-color: #fcf9f8;
+  color: #1b1c1c;
+  --bg: #fcf9f8;
+  --surface: #ffffff;
+  --surface-muted: #f7f3f0;
+  --primary: #334537;
+  --primary-soft: #d3e8d5;
+  --accent: #7ca88a;
+  --secondary: #8c4e37;
+  --secondary-soft: #ffdbcf;
+  --on-surface: #1b1c1c;
+  --on-surface-muted: #6b6f73;
+  --outline: #737872;
+  --success: #21704e;
+  --error: #c53030;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--on-surface);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--primary-soft);
+  color: var(--on-surface);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.clip-path-organic {
+  clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

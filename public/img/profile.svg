@@ -1,0 +1,11 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="48" fill="#F7F3F0"/>
+  <circle cx="320" cy="240" r="120" fill="#334537"/>
+  <path d="M200 548C200 452 260 400 320 400C380 400 440 452 440 548H200Z" fill="#334537"/>
+  <path d="M140 152L228 184L260 132L199 99L140 152Z" fill="#8C4E37" opacity="0.9"/>
+  <path d="M500 120L386 100L350 180L470 200L500 120Z" fill="#8C4E37" opacity="0.75"/>
+  <path d="M130 470C145 400 210 375 262 384C257 420 250 462 200 470H130Z" fill="#D3E8D5" opacity="0.8"/>
+  <path d="M520 470C505 398 444 376 392 382C397 418 402 460 452 468H520Z" fill="#D3E8D5" opacity="0.8"/>
+  <text x="50%" y="545" dominant-baseline="middle" text-anchor="middle" fill="#334537" font-size="26" font-family="Inter, sans-serif">Buse Nur Polat</text>
+  <text x="50%" y="580" dominant-baseline="middle" text-anchor="middle" fill="#8C4E37" font-size="18" font-family="Inter, sans-serif">Diyetisyen / Türkiye</text>
+</svg>
