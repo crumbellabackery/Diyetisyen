@@ -12,7 +12,7 @@ const initialForm = {
   name: '',
   email: '',
   phone: '',
-  method: 'Online' as 'Online' | 'Yüz yüze',
+  method: 'Online' as 'Online',
   date: new Date().toISOString().split('T')[0],
   timeSlot: timeSlots[0],
   message: '',
@@ -80,10 +80,7 @@ export default function BookingForm() {
     <div className="glass-card rounded-[2.5rem] p-10 shadow-glow">
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-secondary">Randevu Talebi</p>
-        <h2 className="mt-4 text-3xl font-semibold text-primary">Hızlı ve kullanışlı randevu ekranı</h2>
-        <p className="mt-3 max-w-2xl text-base leading-7 text-on-surface/75">
-          En gerekli bilgilerle 09:00-18:00 arasında randevu seçin. Gereksiz adımları kaldırdım.
-        </p>
+        <h2 className="mt-4 text-3xl font-semibold text-primary">Randevu Formu</h2>
       </div>
 
       {status === 'success' ? (
@@ -132,14 +129,9 @@ export default function BookingForm() {
             </label>
             <label className="space-y-2 text-sm font-medium text-on-surface/90">
               Seans Türü
-              <select
-                value={form.method}
-                onChange={(e) => handleChange('method', e.target.value as 'Online' | 'Yüz yüze')}
-                className="w-full rounded-3xl border border-outline bg-white px-5 py-3 text-sm outline-none"
-              >
-                <option>Online</option>
-                <option>Yüz yüze</option>
-              </select>
+              <div className="w-full rounded-3xl border border-outline bg-surface px-5 py-3 text-sm text-on-surface/80">
+                Online
+              </div>
             </label>
           </div>
 
@@ -179,17 +171,6 @@ export default function BookingForm() {
             </div>
           </div>
 
-          <label className="space-y-2 text-sm font-medium text-on-surface/90">
-            Kısa not (isteğe bağlı)
-            <textarea
-              value={form.message}
-              onChange={(e) => handleChange('message', e.target.value)}
-              rows={4}
-              className="w-full rounded-[1.5rem] border border-outline px-5 py-4 text-sm outline-none"
-              placeholder="Özel not, alerji veya hazırlık bilgisi bırakabilirsiniz."
-            />
-          </label>
-
           <label className="flex items-start gap-3 text-sm text-on-surface/80">
             <input
               type="checkbox"
@@ -210,16 +191,6 @@ export default function BookingForm() {
           </Button>
         </form>
       )}
-
-      <div className="mt-10 rounded-[2rem] border border-outline/40 bg-surface p-6">
-        <h3 className="text-lg font-semibold text-primary">Basit ve hızlı</h3>
-        <ul className="mt-4 grid gap-3 text-sm text-on-surface/80 sm:grid-cols-2">
-          <li className="rounded-3xl border border-outline/50 bg-white px-4 py-3">Sadece gerekli alanlar</li>
-          <li className="rounded-3xl border border-outline/50 bg-white px-4 py-3">09:00 - 18:00 arasından saat seçimi</li>
-          <li className="rounded-3xl border border-outline/50 bg-white px-4 py-3">Hızlı onay süreci</li>
-          <li className="rounded-3xl border border-outline/50 bg-white px-4 py-3">İsteğe bağlı not alanı</li>
-        </ul>
-      </div>
 
       {isSuccessPopupOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">

@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Buse Nur Polat | Klinik Beslenme & Wellness',
-  description: 'Buse Nur Polat için profesyonel diyetsyen web sitesi - klinik beslenme, holistik wellness ve danışmanlık hizmetleri.',
+  description: 'Buse Nur Polat için profesyonel diyetisyen web sitesi - klinik beslenme ve danışmanlık hizmetleri.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

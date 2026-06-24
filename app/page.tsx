@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 import HealthCalculator from '../components/HealthCalculator';
@@ -10,17 +11,17 @@ const services = [
   {
     title: 'Online Koçluk',
     description: 'Kişiye özel beslenme planları, haftalık takip ve doğrudan danışman erişimi.',
-    icon: 'cloud_sync',
+    icon: '☁️',
   },
   {
     title: 'Klinik Beslenme',
     description: 'PCOS, insülin direnci ve metabolik sağlık için bilimsel tedavi planları.',
-    icon: 'medical_services',
+    icon: '🩺',
   },
   {
     title: 'Spor Beslenmesi',
     description: 'Performans ve toparlanma için enerji, makro ve mikronutrient stratejileri.',
-    icon: 'fitness_center',
+    icon: '🥗',
   },
 ];
 
@@ -48,8 +49,17 @@ export default function HomePage() {
           </div>
           <div className="relative mx-auto aspect-[4/5] w-full max-w-xl overflow-hidden rounded-[2rem] bg-primary-fixed/20 shadow-glow">
             <div className="absolute inset-0 bg-primary-fixed/30" />
-            <div className="absolute inset-0 flex items-center justify-center p-10">
-              <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top,_rgba(51,69,55,0.12),_transparent_45%),linear-gradient(180deg,#fff_0%,#f7f3f0_100%)] shadow-2xl" />
+            <div className="absolute inset-0 p-6 sm:p-8">
+              <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top,_rgba(51,69,55,0.12),_transparent_45%),linear-gradient(180deg,#fff_0%,#f7f3f0_100%)] shadow-2xl">
+                <Image
+                  src="/img/hero-food.jpg"
+                  alt="Sağlıklı beslenme ve yaşam tarzı"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 640px"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -67,8 +77,8 @@ export default function HomePage() {
           <div className="grid gap-6 sm:grid-cols-2">
             {services.map((service) => (
               <Card key={service.title} className="rounded-[2rem] p-8 shadow-sm transition hover:-translate-y-1">
-                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary">
-                  <span className="material-symbols-outlined text-2xl">{service.icon}</span>
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/10 text-secondary text-2xl">
+                  <span>{service.icon}</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-primary">{service.title}</h3>
                 <p className="mt-4 text-base leading-7 text-on-surface/75">{service.description}</p>
@@ -95,9 +105,6 @@ export default function HomePage() {
                 { label: 'Sürekli Ayar', text: 'İlerleme izlenir, çıktılar doğrultusunda planlar dinamik olarak güncellenir.' },
               ].map((item) => (
                 <div key={item.label} className="glass-card rounded-[2rem] p-8">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-fixed text-primary font-semibold">
-                    {item.label.split(' ')[0].slice(0, 1)}
-                  </div>
                   <h3 className="text-2xl font-semibold text-primary">{item.label}</h3>
                   <p className="mt-3 text-on-surface/75">{item.text}</p>
                 </div>

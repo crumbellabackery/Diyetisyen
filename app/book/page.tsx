@@ -28,8 +28,8 @@ export default function BookPage() {
             </div>
 
             <div className="glass-card rounded-[2.5rem] border border-white/90 p-8 shadow-glow backdrop-blur-xl">
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-3xl bg-primary text-on-primary">
-                <span className="material-symbols-outlined text-2xl">health_and_safety</span>
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-3xl bg-primary text-on-primary text-2xl">
+                <span>🩺</span>
               </div>
               <h2 className="text-3xl font-semibold text-primary">Online ya da yüz yüze, sizin için uygun program.</h2>
               <p className="mt-4 text-on-surface/80 leading-7">
@@ -82,12 +82,12 @@ export default function BookPage() {
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl bg-primary-fixed/80 p-5">
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Tahmini süre</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">İlk görüşme süresi</p>
                   <p className="mt-3 text-3xl font-semibold text-primary">10 dk</p>
                 </div>
                 <div className="rounded-3xl bg-primary-fixed/80 p-5">
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Kapsam</p>
-                  <p className="mt-3 text-3xl font-semibold text-primary">Ön değerlendirme + plan</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Odak</p>
+                  <p className="mt-3 text-3xl font-semibold text-primary">Hedef + uygun saat</p>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ export async function POST(request: Request) {
         <div style="max-width:640px; margin:0 auto; background:white; border-radius:24px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
           <div style="background:linear-gradient(135deg,#6b8f71,#4b6b53); padding:28px 32px; color:white;">
             <h2 style="margin:0 0 8px 0; font-size:24px;">Yeni Randevu Talebi</h2>
-            <p style="margin:0; font-size:14px; opacity:0.95;">Profesyonel diyetisyen hizmeti için yeni bir talep alındı.</p>
+            <p style="margin:0; font-size:14px; opacity:0.95;">Yeni bir randevu talebi alındı.</p>
           </div>
           <div style="padding:32px;">
             <p style="margin-top:0; font-size:16px; line-height:1.6;">Merhaba,</p>
@@ -52,7 +52,6 @@ export async function POST(request: Request) {
         <div style="max-width:640px; margin:0 auto; background:white; border-radius:24px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
           <div style="background:linear-gradient(135deg,#6b8f71,#4b6b53); padding:28px 32px; color:white;">
             <h2 style="margin:0 0 8px 0; font-size:24px;">Randevu Talebiniz Alındı</h2>
-            <p style="margin:0; font-size:14px; opacity:0.95;">Seçtiğiniz tarih ve saat için teşekkür ederiz.</p>
           </div>
           <div style="padding:32px;">
             <p style="margin-top:0; font-size:16px; line-height:1.6;">Merhaba ${name},</p>
@@ -68,7 +67,7 @@ export async function POST(request: Request) {
         </div>
       </div>
     `;
-    
+
 
     if (resendApiKey) {
       if (!sender) {

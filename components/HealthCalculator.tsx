@@ -238,11 +238,14 @@ export default function HealthCalculator() {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <Link href="/book" className="inline-flex w-full items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-semibold text-on-primary transition hover:opacity-90 sm:w-auto">
+              <Link
+                href="/book"
+                className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-xs font-semibold leading-5 text-on-primary transition hover:opacity-90 sm:w-auto sm:px-8 sm:py-4 sm:text-sm"
+              >
                 Danışmanlık İçin Randevu Al
               </Link>
               <p className="max-w-xl text-sm text-on-surface/75">
-                Hesaplayıcılardaki sonuçlar, kişisel değerlendirme yerine geçmez. Uzmanla çalışarak hedeflerinize özel planınızı netleştirin.
+                Hesaplayıcılardaki sonuçlar, kişisel değerlendirme yerine geçmez. Diyetisyen ile çalışarak hedeflerinize özel planınızı netleştirin.
               </p>
             </div>
           </div>

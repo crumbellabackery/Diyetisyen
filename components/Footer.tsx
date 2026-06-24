@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           <div>
             <h3 className="font-display text-2xl font-semibold text-primary">Buse Nur Polat</h3>
-            <p className="mt-4 max-w-sm text-sm leading-7 text-on-surface/80">Klinik beslenme ve holistik wellness alanında kişiye özel danışmanlık. Bilimsel yaklaşım, sürdürülebilir sonuç.</p>
+            <p className="mt-4 max-w-sm text-sm leading-7 text-on-surface/80">Klinik beslenme alanında kişiye özel danışmanlık. Bilimsel yaklaşım, sürdürülebilir sonuç.</p>
           </div>
 
           <details className="md:block">
@@ -22,18 +22,8 @@ export default function Footer() {
             <summary className="mb-4 cursor-pointer text-sm font-semibold uppercase tracking-[0.2em] text-secondary md:cursor-default">İletişim</summary>
             <ul className="space-y-3 text-sm text-on-surface/80">
               <li>busenurpolat4@gmail.com</li>
-              <li>Malatya, Türkiye</li>
-              <li>LinkedIn profiliniz için sayfa güncellenebilir</li>
+              <li>Türkiye</li>
             </ul>
-          </details>
-
-          <details className="md:block">
-            <summary className="mb-4 cursor-pointer text-sm font-semibold uppercase tracking-[0.2em] text-secondary md:cursor-default">Bülten</summary>
-            <p className="mb-4 text-sm text-on-surface/80">Metabolik sağlık ve beslenme ipuçları için kaydolun.</p>
-            <div className="flex gap-2">
-              <input className="min-w-0 flex-1 rounded-l-full border border-outline px-4 py-2 text-sm outline-none" placeholder="E-posta adresi" />
-              <button className="rounded-r-full bg-primary px-4 py-2 text-sm font-semibold text-on-primary">Gönder</button>
-            </div>
           </details>
         </div>
       </div>

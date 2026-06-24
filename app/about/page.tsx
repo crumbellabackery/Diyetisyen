@@ -23,12 +23,12 @@ export default function AboutPage() {
             <div className="space-y-8">
               <Card className="overflow-hidden">
                 <div className="relative aspect-[4/5] w-full bg-primary-fixed/50">
-                  <Image src="/img/profile.svg" alt="Buse Nur Polat profil" fill className="object-cover" />
+                  <Image src="/img/about-abstract.jpg" alt="Beslenme ve yaşam tarzı temalı görsel" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
                 </div>
               </Card>
               <Card tone="soft" className="space-y-6">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.24em] text-secondary">Klinik Beslenme Uzmanı</p>
+                  <p className="text-sm uppercase tracking-[0.24em] text-secondary">Diyetisyen</p>
                   <h1 className="mt-4 text-4xl font-semibold text-primary">Buse Nur Polat</h1>
                 </div>
                 <div className="space-y-3 text-sm leading-7 text-on-surface/80">
@@ -51,7 +51,7 @@ export default function AboutPage() {
               <SectionHeading
                 eyebrow="Hakkımda"
                 title="Klinik bakışla, kişiye özel beslenme danışmanlığı."
-                subtitle="Malatya merkezli diyetisyen olarak metabolik sendrom, hormon dengesi ve kronik hastalık yönetimi için bilimsel ve empatik bir yaklaşım sunuyorum."
+                subtitle="Metabolik sendrom, hormon dengesi ve kronik hastalık yönetimi için bilimsel ve empatik bir yaklaşım sunuyorum."
               />
               <div className="mt-8 space-y-6 rounded-[2rem] border border-outline/20 bg-surface p-10 shadow-sm">
                 <p className="text-base leading-8 text-on-surface/80">
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <Card className="p-8">
               <h3 className="text-xl font-semibold text-primary">Eğitim</h3>
               <p className="mt-4 text-on-surface/80 leading-7">
-                Beslenme ve Diyetetik alanında uzmanlaşmış bir klinik diyetisyen olarak, kanıta dayalı beslenme yaklaşımlarıyla çalışıyorum.
+                Beslenme ve Diyetetik alanında klinik yaklaşım ve kanıta dayalı yöntemlerle çalışıyorum.
               </p>
             </Card>
             <Card className="p-8">
