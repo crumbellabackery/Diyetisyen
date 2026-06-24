@@ -59,6 +59,12 @@ export async function POST(request: Request) {
         );
       }
 
+      console.log('Resend mail attempt', {
+        recipient,
+        sender,
+        resendApiKeyLength: resendApiKey.length,
+      });
+
       const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -88,6 +94,14 @@ export async function POST(request: Request) {
         {
           error:
             'E-posta yapılandırması eksik. .env.local dosyanıza ya gerçek SMTP bilgilerini ya da RESEND_API_KEY ekleyin.',
+          debug: {
+            recipient,
+            sender,
+            resendApiKeyPresent: Boolean(resendApiKey),
+            smtpHostPresent: Boolean(smtpHost),
+            smtpUserPresent: Boolean(smtpUser),
+            smtpPassPresent: Boolean(smtpPass),
+          },
         },
         { status: 500 }
       );
