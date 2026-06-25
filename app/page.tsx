@@ -25,7 +25,26 @@ const services = [
   },
 ];
 
+const testimonials = [
+  { displayName: 'A. K.', meta: '34 yaş • Hedef: kilo kontrolü', quote: 'Belirsizliğim azaldı; plan net, destek sürekli ve benim yaşam tarzıma uygun oldu.' },
+  { displayName: 'D. Y.', meta: '41 yaş • Hedef: enerji ve sindirim', quote: 'Yalnızca yemek listesi değil, benim günlük ritmimi de dikkate alan bir yaklaşım sundu.' },
+  { displayName: 'S. T.', meta: '29 yaş • Hedef: spor performansı', quote: 'İlerlemeyi takip etmek çok daha kolay hale geldi; kendime güvenim arttı.' },
+  { displayName: 'M. A.', meta: '38 yaş • Hedef: hormon dengesi', quote: 'Her adımda daha rahat hissettim; süreci gerçekten anlaşılır kılan bir rehberlik oldu.' },
+  { displayName: 'C. B.', meta: '27 yaş • Hedef: beslenme düzeni', quote: 'Uygulaması zor olmadan, günlük hayata uygun bir plan çıkardık.' },
+  { displayName: 'İ. C.', meta: '45 yaş • Hedef: sindirim ve halsizlik', quote: 'İlk haftalardan itibaren kendimi daha iyi hissetmeye başladım.' },
+  { displayName: 'B. D.', meta: '31 yaş • Hedef: performans ve toparlanma', quote: 'Beslenme artık bir yük değil, benimle birlikte çalışan bir sistem haline geldi.' },
+  { displayName: 'P. E.', meta: '36 yaş • Hedef: metabolik destek', quote: 'Sürekli destek alıyor olmak beni çok rahatlattı; motive kalmamı sağladı.' },
+  { displayName: 'E. F.', meta: '33 yaş • Hedef: düzen ve alışkanlık', quote: 'Kendime ait bir planım oldu; bu yüzden değişim daha kalıcı hale geldi.' },
+  { displayName: 'G. G.', meta: '40 yaş • Hedef: kilo verme ve enerji', quote: 'Yemeklerden korkmadan, daha bilinçli seçimler yapmaya başladım.' },
+  { displayName: 'D. H.', meta: '35 yaş • Hedef: bağışıklık ve uyku', quote: 'Sadece bir diyet değil, yaşam kalitemi düzene sokan bir süreç oldu.' },
+  { displayName: 'A. İ.', meta: '42 yaş • Hedef: dengeli beslenme', quote: 'Çok daha sakin ve net bir şekilde ilerliyorum; bu da bana büyük güven verdi.' },
+];
+
 export default function HomePage() {
+  const displayedTestimonials = [...testimonials]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
+
   return (
     <main className="bg-background text-on-surface">
       <Navbar />
@@ -82,6 +101,30 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-semibold text-primary">{service.title}</h3>
                 <p className="mt-4 text-base leading-7 text-on-surface/75">{service.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1280px] px-4 pb-20 sm:px-6 md:px-10">
+        <div className="rounded-[2rem] bg-surface p-6 shadow-sm sm:rounded-[3rem] sm:p-8 md:p-14">
+          <SectionHeading
+            eyebrow="Danışan Deneyimleri"
+            title="Danışan görüşleri, güveni destekleyen doğal izlerdir."
+            titleClassName="text-3xl sm:text-4xl"
+          />
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {displayedTestimonials.map((item) => (
+              <Card key={item.displayName} className="rounded-[1.5rem] p-5 shadow-sm sm:rounded-[2rem] sm:p-6 md:p-8">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="text-lg font-semibold text-primary">{item.displayName}</p>
+                    <p className="mt-1 text-sm text-on-surface/60">{item.meta}</p>
+                  </div>
+                  <div className="inline-flex w-fit rounded-full bg-secondary/10 px-3 py-1 text-sm font-semibold text-secondary">★★★★★</div>
+                </div>
+                <p className="mt-4 text-sm leading-7 text-on-surface/75 sm:mt-6 sm:text-base">“{item.quote}”</p>
               </Card>
             ))}
           </div>
